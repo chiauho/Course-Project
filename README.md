@@ -1,5 +1,5 @@
-**run_analysis.R**
-**Program submitted for course project**
+**run_analysis.R**   
+**Program submitted for course project**   
 **Submitted by: Chiau Ho ONG**
 
 The run_analysis.R program does the following:
