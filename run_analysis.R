@@ -70,5 +70,10 @@ print("Data for step 4 completed .....")
 print("Now generating tidydata set ......")
 tidy_data <-ddply(c_total_data,c("Subject_ID","Activities"),function(df) colMeans(df[3:81]))
 
+# Modify variable names 3 to 81 to reflect that they are now mean values
+col_names <- names(tidy_data[3:81])
+col_names <- paste("Mean of",col_names)
+colnames(tidy_data)[3:81] <- col_names
+
 print("Now writing tidydata set to file tidy_data.txt ......")
 write.table(tidy_data,file="tidy_data.txt",row.names=FALSE)
