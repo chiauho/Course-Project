@@ -18,5 +18,5 @@ Steps 1 to 8 gets us the data set required for step 4 of the assignment
 Now for step 5 - create a tidy data set with average of each variable for each activity and each subject:
 
 1. Use the plyr package. ddply function is handy. This function takes in a data frame and returns a data frame.
-2. Apply it to c_total_data data frame. Tells is to group by the 2 columns: Subject_ID and Activities. 
+2. Apply it to c_total_data data frame. Tells ddply to split by Subject_ID and Activities. Then apply mean to each column based on Subject_ID and Activity type for that Subject_ID. For example Subject_ID 1 & Activity STANDING, return the mean of each column.
 3. Finally write the resultant data frame to a txt file "tidy_data.txt"
