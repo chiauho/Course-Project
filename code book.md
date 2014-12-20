@@ -8,9 +8,12 @@ The first 2 columns describe the subject identity (by number 1 to 30) and the si
 
 The next 79 variables have the following format:
 
-                  XAABB-CC-D
+                  Y XAABB-CC-D
 
 The format has the following meaning:      
+
+**Y** = Mean of     
+All the 79 variables are mean values. And yes, so you get mean of std().        
 
 **X** = t or f.    
 t = time domain measurements of the linear acceleration and angular velocity signals captured.    
