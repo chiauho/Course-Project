@@ -8,17 +8,17 @@ From the raw data, the mean and standard deviation variables were extracted. A t
 
 **Code book**     
 This is the code book for the tidy data (tidy_data.txt) resulted from the experiments.  
-It describes the 81 variables (columns) in the data file.    
+It describes the 68 variables (columns) in the data file.    
 The first 2 columns describe the subject identity (by number 1 to 30) and the six activities performed by each subject.    
 
-The next 79 variables have the following format:
+The next 66 variables have the following format:
 
                   Y XAABB-CC-D
 
 The format has the following meaning:      
 
 **Y** = Mean of     
-All the 79 variables are mean values. And yes, so you get mean of std().        
+All the 66 variables are mean values. And yes, so you get mean of std().        
 
 **X** = t or f.    
 t = time domain measurements of the linear acceleration and angular velocity signals captured.    
