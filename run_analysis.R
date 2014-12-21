@@ -28,10 +28,13 @@ print("extracting and combining mean & std - step 2 ....")
 # Get mean data
 mean_col <- grep("mean",names(total_data))
 mean_data <- total_data[mean_col]
+# Remove meanFreq()
+mean_data <- mean_data[,-grep("meanFreq",names(mean_data))]
 
 # Get Std data
 std_col <- grep("std", names(total_data))
 std_data <- total_data[std_col]
+
 
 # Now recombine std & mean data as one
 total_data <- cbind(mean_data, std_data)
@@ -67,13 +70,14 @@ activity <- replace(activity, activity == 6, "LAYING")
 c_total_data[[2]] <- activity
 print("Data for step 4 completed .....")
 
+num_col <- ncol(c_total_data)
 print("Now generating tidydata set ......")
-tidy_data <-ddply(c_total_data,c("Subject_ID","Activities"),function(df) colMeans(df[3:81]))
+tidy_data <-ddply(c_total_data,c("Subject_ID","Activities"),function(df) colMeans(df[3:num_col]))
 
-# Modify variable names 3 to 81 to reflect that they are now mean values
-col_names <- names(tidy_data[3:81])
+# Modify variable names 3 to 68 to reflect that they are now mean values
+col_names <- names(tidy_data[3:num_col])
 col_names <- paste("Mean of",col_names)
-colnames(tidy_data)[3:81] <- col_names
+colnames(tidy_data)[3:num_col] <- col_names
 
 print("Now writing tidydata set to file tidy_data.txt ......")
 write.table(tidy_data,file="tidy_data.txt",row.names=FALSE)
