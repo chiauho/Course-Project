@@ -32,10 +32,9 @@ BodyGyro signal measures the body angular velocity from the gyroscope.
 Jerk signals are derived from body linear acceleration or angular velocity signals in time domain (t).     
 Magnitude (Mag) of some of these signals were calculated using the Euclidean norm. See note below.     
 
-**CC** = mean(), std() or meanFreq().    
+**CC** = mean(), std().    
 mean() = Mean value estimated from the signals;     
-std() = Standard Deviation estimated frome the signals;    
-meanFreq() = Weighted average of the frequency components to obtain a mean frequency.    
+std() = Standard Deviation estimated from the signals;    
 
 **D** = X,Y,Z or none.   
 X, Y, Z directions due to either the linear acceleration or angular velocity.          
